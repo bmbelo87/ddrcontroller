@@ -4,13 +4,14 @@
 #include "pico/stdlib.h"
 #include <stdio.h>
 #include <string.h>
-#include "tusb.h"
-#include "usb_descriptors.h"
 #include "tusb_config.h"
+#include "tusb.h"
+#include "descriptors/usb_descriptors.h"
+#include "board_config.h"
 
 // Button and LED mapping (change if needed)
-static const uint BUTTON_PINS[4] = {2, 3, 4, 5};
-static const uint LED_PINS[4]    = {6, 7, 8, 9};
+static const uint BUTTON_PINS[4] = {LEFT, DOWN, UP, RIGHT};
+static const uint LED_PINS[4]    = {LED_LEFT, LED_DOWN, LED_UP, LED_RIGHT};
 
 void processJoystickMode(uint16_t *buttons) {
     // Monta a bitmask dos botões: bit 0 -> BUTTON_PINS[0], bit 1 -> BUTTON_PINS[1], ...

@@ -9,12 +9,12 @@ pico_sdk_init()
 
 add_executable(ddrcontroller
     main.c
-    usb_descriptors.c
+    descriptors/usb_descriptors.c
 )
 
 target_sources(ddrcontroller PUBLIC
         ${CMAKE_CURRENT_LIST_DIR}/main.c
-        ${CMAKE_CURRENT_LIST_DIR}/usb_descriptors.c
+        ${CMAKE_CURRENT_LIST_DIR}/descriptors/usb_descriptors.c
         )
 
 target_include_directories(ddrcontroller PUBLIC

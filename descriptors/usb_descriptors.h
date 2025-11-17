@@ -12,7 +12,6 @@ enum
     REPORT_ID_COUNT
 };
 
-
 typedef enum {
     ITF_NUM_GAMEPAD = 0,
     ITF_NUM_GAMEPAD_TOTAL = 1
